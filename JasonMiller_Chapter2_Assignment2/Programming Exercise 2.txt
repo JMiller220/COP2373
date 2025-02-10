@@ -1,0 +1,86 @@
+Technical Design Document Template
+Name: Jason Miller  
+Date Created: January 27, 2025
+
+Program Description: 
+This program checks emails received from users and indicates how likely it is to be a scam and what caused the email to be considered spam. 
+
+Functions used in the Program (list in order as they are called):
+1. Function Name: main() 
+     
+Description: This function contains common spam phrases, gets the users input, and displays all results to the user.
+     
+Parameters: None
+
+Variables: 
+spam_phrases(list) –A list of common spam words or phrases found in emails.
+get_email(string input) – Gets the email from the user
+email_word_count(list)—Breaks up the email into individual words and stores it into a list
+spam_score(integer and list) – Result of the “get_spam_score” function
+user_spam_score(integer)—The spam score of an email
+caused_phrases(string)—The spam phrases found in an email
+percent(float)—The percentage of spam words in an email.
+
+Logical Steps: 
+1. Create a list of 30 common spam words or phrases
+2. Receive an email from the user
+3. Split the email into individual words
+4. Call the “get_spam_score” function and assign this to a variable.
+	o Passing the email and list of spam words to it
+5. Assign the spam score to a variable
+6. Assign the found spam words in an email to a variable
+7. Call the “get_likelihood” function and assign this to a variable
+	o Passing the individual words in an email and spam score to it
+8. Display the spam score, found spam words, and percentage variables to the user.
+     
+Returns: None
+
+2. Function Name: get_spam_score(email, phrases)
+
+Description: This function counts the amount of spam words in an email and puts the found spam words into a list.
+
+Parameters: 
+get_email(User input) – Email received from the user
+phrases(list) – List of common spam phrases
+
+Variables: 
+spam_score(accumulator) – Counts the spam words found in a given email
+words_found(list) – Holds found spam words in a given email
+
+Logical Steps: 
+1. Create an accumulator to count spam words in the email
+2. Create an empty list to hold found spam words
+3. Create a for loop to loop through the list of common spam phrases
+	a. create an if statement that triggers if a phrase in the spam_phrases list is found in the email. 
+		i. adds 1 point to spam score and append the spam phrase to empty list
+		ii. force the phrase list and the email to be all lowercase
+4. Return the spam score and words found list
+    
+Returns: 
+spam_score(accumulator) – has the number of spam phrases found.
+words_found(list) – has the flagged phrases found in the email
+
+3. Function Name: get_likelihood(email, spam_count)  
+     
+Description: This function finds the percentage of spam words found in a given email
+     
+Parameters: 
+email(List) – Email received from the user broken up by individual words
+spam_count(Integer)—The number of spam words that was found in the email 
+     
+Variables: likelihood(Float) – calculates the percentage of spam words in a given email
+     
+Logical Steps: 
+1. Divide the number of spam words found in an email by the number of words in the email
+a. If the email is 0 words, the program stops and exits.
+2. Multiply the quotient by 100 
+a. This is to move the decimal point twice to the right
+     Returns: likelihood(Float) – Holds the percentage of spam words found
+
+
+Logical Steps:
+1. Call the main function 
+2. Call the “get_spam_score” function inside the main function first.
+3. Call the “get_likelihood” function inside the main function second.
+
+https://github.com/JMiller220/COP2373
