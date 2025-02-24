@@ -1,0 +1,68 @@
+Technical Design Document Template
+Name: Jason Miller
+Date Created: February 3, 2025
+
+Program Description: 
+This program allows a user to enter their expenses (both type and amount) and displays their highest expense, lowest expense, and total monthly expense.
+
+Functions used in the Program (list in order as they are called):
+1. Function Name: Main()
+
+Description: Gathers, calculates, and displays expenses.
+
+Parameters: None  
+
+Variables: 
+1. type_exp(list) – Gathers the expense types
+2. amount_exp(list) – Gathers the expense amounts
+3. words(list) – Holds the individual expense types
+4. numbers(list) – holds the individual expense amounts
+5. num(float) – expense amount as a float
+6. expenses_dict(dictionary) – Holds the expense types(key) and their corresponding amount(amount)
+7. total(float) – The total of all the expenses together
+8. expense(key) – A key in the “expenses_dict” dictionary
+
+Logical Steps: 
+1. Display what the program does to the user
+2. Gather the expense types in the “type_exp” variable from the user 
+	a. Split this input into a list
+3. Gather the expense amounts in the “amount_exp” variable from the user
+	a. Split this input into a list
+4. Check if either input has nothing in it
+	a. If either input contains nothing, exit the program
+5. Check if either input contains more items than the other
+	a. If it does, prompt the user the option to quit
+	b. Re-prompt the “amount exp” variable
+	c. Check if the user types “quit”
+		i. Exit the program if so
+	d. Re-split the amount_exp variable
+6. Put the expense types in the “e_type” list individually
+
+7. Try to put the expense amount as a float into the “numbers” list individually
+	a. If a ValueError occurs, display that there needs to be a valid number
+	b. exit the program
+8. Check if any amount (using a “num” variable) in the “numbers” list is less than 0
+	a. If so, display that there cannot be negative numbers
+	b. Exit the program
+9. Display underlines
+10. Create a dictionary called “expenses_dict”
+	a. Zip both the “e_type” and “numbers” dictionary
+	b. For each item, add the expense type as the key, and the amount as the value
+11. Assign a reduce function to the “total” variable to add all expense amounts together 
+	a. Use a lambda function
+		i. Add two variables together
+	b. Use the numbers list
+12. Check each expense in the “expenses_dict” dictionary
+	a. Check which expense equals the highest number in the “numbers” list
+		i. Display this number
+	b. Check which expense equals the lowest number in the “numbers” list
+		i. Display this number
+13. Display the “total” variable
+
+Returns: None
+
+Logical Steps:
+1. Call the main function
+
+https://github.com/JMiller220/COP2373
+
