@@ -1,0 +1,76 @@
+Technical Design Document Template
+Name: Jason Miller  
+Date Created: 2/23/2025
+
+Program Description: 
+This program validates or invalidates a given phone number, SSN, and zip code to their respective formats.
+
+Functions used in the Program (list in order as they are called):
+1. Function Name: check_phone_num(user_pn)
+Description: Checks if a given phone number has the correct format
+Parameters: p_number(string) – A phone number by the user
+Variables: 
+1. pattern (raw string) – A phone number format
+2. result(string) – Holds a response for either a valid input or an invalid input
+Logical Steps: 
+1. Define a pattern to compare the phone number to
+2. Use a match function to compare the pattern and phone number 
+	a. If the phone number format is equal to the predefined pattern, return a “valid” statement 
+	b. Otherwise, return a “invalid” statement
+Returns: result(string) -- – Holds a response for either a valid input or an invalid input
+
+2. Function Name: check_ssn(ssn)
+Description: Checks if a given social security number has the correct format
+Parameters: ssn(string) – A social security number by the user
+Variables: 
+1. pattern (raw string) – A social security number format
+2. result(string) – Holds a response for either a valid input or an invalid input
+Logical Steps: 
+1. Same as check_phone_num function but with a social security number
+Returns: result(string) -- – Holds a response for either a valid input or an invalid input
+
+3. Function Name: check_zip(zip_code)
+Description: Checks if the last 5 digits of a given zip code has the correct format
+Parameters: zip(string) – A zip code by the user
+Variables: 
+1. pattern (raw string) – A zip code format
+2. result(string) – Holds a response for either a valid input or an invalid input
+     Logical Steps: 
+1. Same as check_phone_num function but with a zip code 
+Returns: result(string) -- – Holds a response for either a valid input or an invalid input
+
+4. Function Name: main()
+Description: Receives and displays a valid or invalid statement for a phone number, SSN, and zip code
+Parameters: None
+Variables: 
+1. re_enter (initializer/conditional) – Used to initialize and/or rerun the main() function
+2. user_pn(string) – Prompts user for phone number
+3. user_ssn(string) -- Prompts user for social security number
+4. user_zip(string) -- Prompts user for last five digits of a zip code 
+5. phone – calls and assigns the result of the check_phone_num function
+6. ssn -- calls and assigns the result check_ ssn function
+7. zip_code -- calls and assigns the result check_zip function
+Logical Steps: 
+1. Create an initializer to start a loop
+2. Create a while loop to loop through the main function
+3. Prompt user for a phone number
+4. Prompt user for a social security number
+5. Prompt user for the last 5 digits of a zip code 
+6. Assign the result of the check_phone_num function to a variable
+7. Assign the result of the check_ssn function to a variable
+8. Assign the result of the check_zip function to a variable
+9. Display the results of each function by the variable
+10. Prompt the user if he/her would like to rerun the program
+	a. Initialize the function again if the user types “y”
+	b. Otherwise, end the program
+Returns: None
+
+Logical Steps:
+1. Call the main function
+2. check_phone_num, check_ssn, and check_zip are all called within the main function
+
+Link to your repository: https://github.com/JMiller220/COP2373
+
+
+
+
