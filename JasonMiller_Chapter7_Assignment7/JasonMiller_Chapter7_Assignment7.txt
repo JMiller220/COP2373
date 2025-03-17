@@ -1,0 +1,49 @@
+Technical Design Document Template
+Name: Jason Miller 
+Date Created: 02/27/2025
+
+Program Description: 
+This program receives, counts, and displays each sentence of a paragraph.
+
+Functions used in the Program (list in order as they are called):
+
+1. Function Name: get_sentence(paragraph)
+Description: Counts the sentences and displays each sentence  
+Parameters: paragraph(String) – Users paragaph 
+Variables:
+1. s_count(accumulator) – holds the number of sentences in a paragraph
+2. pattern(raw string) – A sentence format
+3. sentence(list) – Holds each individual sentence 
+Logical Steps: 
+1. Create an accumulator to count the number of sentences
+	a. Set this to 1
+2. Define a pattern for what defines as a sentence
+3. Find all the sentences in a given paragraph the match the pattern
+4. Make a for loop.
+	a. Print the sentence count and the sentence.
+	b. Add 1 to s_count accumulator
+     Returns: None
+
+2. Function Name: get_paragraph()  
+Description: Receives a paragraph 
+Parameters: None
+Variables: user_p(string) – a users paragraph
+Logical Steps: 
+1. Prompt the user to enter a string
+2. Return the paragraph
+Returns: user_p(string) – A users paragraph  
+
+3. Function Name: main()  
+Description: Calls the other two functions
+Parameters: None
+Variables: paragraph(function reference) – the result of the get_paragraph function
+Logical Steps: 
+1. Assign the get_paragraph function to a variable
+2. Send the variable to the get_sentence function
+Returns: None
+
+Logical Steps:
+1. Call the main function
+2. get_sentence is called in main
+
+Link to your repository: https://github.com/JMiller220/COP2373
