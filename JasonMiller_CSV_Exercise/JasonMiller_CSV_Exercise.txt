@@ -1,0 +1,58 @@
+Technical Design Document Template
+Name: Jason Miller  
+Date Created: March 3, 2025
+
+Program Description: 
+This program allows a teacher to input a desired number of students’ information, including the student's first name, last name, and three exam grades. The information is written and read from a csv file.
+
+Functions used in the Program (list in order as they are called):
+1. Function Name: get_students() 
+Description: Writes a student’s information to a csv file 
+Parameters: None 
+Variables: 
+1. num_students(integer) – The number of students the teacher wants to input.
+2. students_list(list) – Holds a header and the student’s information for each column.
+3. first(string) – A student’s first name
+4. last(string) – A student’s last name
+5. exam1(integer) – A student’s first exam grade
+6. exam2(integer) – A student’s second exam grade
+7. exam3(integer) – A student’s third exam grade
+8. student(Tuple) – A student’s first and last name and exam 1 2 and 3 grades.
+9. writer(writer instance) – creates a csv writer
+
+Logical Steps:
+1. Get the number of students the teacher wants to enter
+2. Create a list with the header of their information type
+3. Create a loop in the range of the desired number of students 
+	a. Get each student’s first name
+	b.                    last name
+	c.                    first exam grade
+	d.                    second exam grade
+	e.                    third exam grade
+	f. Create an if statement that checks for an invalid grade input
+		i. Explain to the user the reasoning.
+		ii. Exit the code.
+	g. Assign the students information to a single variable
+	h. Append the single variable to the students list
+4. Open a csv file in write mode
+	a. Create a writer object
+	b. Write all rows of the students list to the file
+Returns: None
+
+2. Function Name: read_students_grades 
+Description: Reads the csv file created previously. 
+Parameters: None
+Variables: reader(reader instance) – creates a csv reader
+Logical Steps: 
+1. Open the previous csv file in read mode.
+	a. Create a reader object
+	b. Create a for loop to iterate through each row of the file
+		i. Format and display the header and each row
+		ii. Separate each student by dashes
+Returns: None
+Logical Steps:
+1. Call get_students function
+2. Call read_students_grade function
+
+Link to your repository: https://github.com/JMiller220/COP2373
+
